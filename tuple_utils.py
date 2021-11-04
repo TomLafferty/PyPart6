@@ -53,7 +53,7 @@ def print_indexes_and_entries(indexes: Iterable, entries: Iterable) -> None:
     for element in indexes:
         i = i + 1
         job = entries[i]
-        print(f'Index: {element} Entry: {job}')
+        print(f'Index: {element:<10} Entry: {job}')
 
         if i >= 10:
             break
@@ -84,5 +84,9 @@ def print_items_with_index(items: Iterable):
         print(coloned, element)
     # pass  # remove pass statement and implement me
 
-items = ('Pride', 'Envy', 'Gluttony', 'Lust', 'Anger', 'Greed', 'Sloth')
-print_items_with_index(items)
+# items = ('Pride', 'Envy', 'Gluttony', 'Lust', 'Anger', 'Greed', 'Sloth')
+# print_items_with_index(items)
+#
+# indexes = ('Bilbo', 'Thorin', 'Gandalf')
+# entries = ('Burglar', 'Leader', 'Wizard')
+# print_indexes_and_entries(indexes, entries)
