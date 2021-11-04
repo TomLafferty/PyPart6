@@ -48,7 +48,24 @@ def print_indexes_and_entries(indexes: Iterable, entries: Iterable) -> None:
     :param entries: A list or tuple
     :return: None
     """
+    i = -1
+    # entries = 1
+    for element in indexes:
+        i = i + 1
+        job = entries[i]
+        print(f'Index: {element} Entry: {job}')
 
+        if i >= 10:
+            break
+    # i = 0
+    # list_of_tuples = (indexes, entries)
+    # for index, tuple in enumerate(list_of_tuples):
+    #     i = i + 1
+    #     element_one = tuple[0]
+    #     element_two = tuple[1]
+    #     print(element_one, element_two)
+    #     if i >= 10:
+    #         break
 
     # pass  # remove pass statement and implement me
 
@@ -62,5 +79,10 @@ def print_items_with_index(items: Iterable):
     :param items: A tuple or a list
     :return: None
     """
-    pass  # remove pass statement and implement me
+    for index, element in enumerate(items, start=1):
+        coloned = str(index) +':'
+        print(coloned, element)
+    # pass  # remove pass statement and implement me
 
+items = ('Pride', 'Envy', 'Gluttony', 'Lust', 'Anger', 'Greed', 'Sloth')
+print_items_with_index(items)
