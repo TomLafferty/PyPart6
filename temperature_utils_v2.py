@@ -1,4 +1,4 @@
-
+import math
 
 def convert_to_celsius(fahrenheit_temp: float) -> float:
     """
@@ -30,13 +30,13 @@ def convert_to_fahrenheit(celsius_temp: float) -> float:
 def convert_to_kelvin(celsius_temp: float) -> float:
     form = celsius_temp + 273.15
     new_celc = float(form)
-    return math.ceil(new_celc * 100) / 100
-
+    return math.ceil(form*100)/100
 
 # form = fahrenheit_temp - 32
 #     new_celc = float(form / 1.8000)
 #     return math.ceil(new_celc*100)/100
-def temperature_kelvin(temperatures: Iterable, input_unit_of_measurement: str) -> Tuple[Tuple[float, float]]:
+
+def temperature_tuple(temperatures, input_unit_of_measurement):
 
     answer = []
     temp_tup = tuple()
